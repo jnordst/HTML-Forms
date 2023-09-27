@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Forms</title>
+    </head>
+    <body>
+        <h1>HTML Form Example</h1>
+        <form>
+            <!-- Attributes -->
+            <!-------------------------------------- 
+            name
+                The name Attribute is used to identify the input when the form is submitted. 
+                For example, if you have a form with a name attribute of "myForm" and an input with a name attribute of "name",
+                when the form is submitted you can access the value of the input by using $_POST['name'] in PHP.
+
+            for
+                The for attribute is used to indicate the form element that the label is bound to.
+                The value of the for attribute must be equal to the value of the id attribute of the form element.
+                When the user clicks on the matching label, the corresponding form element is focused on.
+
+            value
+                The value attribute is used to get/set the actually value of the input.
+                For example, if you have an input with a value attribute of "John Doe", 
+                the input will have the value "John Doe" when the page loads.
+
+            placeholder
+                The placeholder attribute is used to specify a short hint that describes the expected value of the input.
+                The short hint is displayed in the input before the user enters a value.
+
+            --------------------------------------->
+
+            <!-- Label -->
+            <!-- The label element is used to give a name to the input. 
+                 The label element is bound to the input by using the for attribute, and linked to an element with matching id. -->
+            <label for="name">Name:</label>
+
+            <!-- Text Input -->
+            <!-- The text input is the most common input type. 
+                 It is used to get a single line of text from the user. -->
+            <input type="text" id="name" name="name" placeholder="Enter your name" /><br /><br />
+
+            <!-- Email Input -->
+            <!-- The email input is used to get an email address from the user. 
+                 It is similar to the text input, but it has some extra validation. 
+                 It will only accept a value that is a valid email address. -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" /><br /><br />
+
+            <!-- Password Input -->
+            <!-- The password input is used to get a password from the user. 
+                 It is similar to the text input, but it hides the value that the user enters.
+                 Password: ******** -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" /><br /><br />
+
+            <!-- Radio Buttons -->
+            <!-- The radio buttons are used to get a single value from the user. 
+                 The user can only select one of the options. 
+                 The radio buttons are grouped by using the name attribute. -->
+            <label>Gender:</label><br />
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Male</label><br />
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Female</label><br /><br />
+
+            <!-- Checkboxes -->
+            <!-- Checkbox forms are used to get one or more values from the user. 
+                 The user can select one or more of the options. 
+                 The checkboxes are grouped by using the name attribute. -->
+            <label>Interests:</label><br />
+            <input type="checkbox" id="music" name="interests" value="music" />
+            <label for="music">Music</label><br />
+            <input
+                type="checkbox"
+                id="sports"
+                name="interests"
+                value="sports"
+            />
+            <label for="sports">Sports</label><br />
+            <input
+                type="checkbox"
+                id="movies"
+                name="interests"
+                value="movies"
+            />
+            <label for="movies">Movies</label><br /><br />
+
+            <!-- Select Dropdown -->
+            <!-- The select dropdown is can display a list of options to the user. 
+                 The user can only select one of the options. -->
+            <label for="country">Country:</label>
+            <select name="country" id="country">
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+                <option value="mexico">India</option></select
+            ><br /><br />
+
+            <!-- Textarea -->
+            <!-- The textarea is used to get a multi-line text from the user. -->
+            <label for="message">Message:</label><br />
+            <textarea name="message" id="message"  rows="4" cols="50" placeholder="Leave a message"></textarea
+            ><br /><br />
+
+            <!-- Submit Button -->
+            <!-- The submit button is used to submit the form. 
+                 The form is submitted to the URL specified in the action attribute.
+                 The method attribute specifies the HTTP method that will be used to submit the form.
+                 The most common methods are GET and POST. Which either retrieve or send data to the server. -->
+            <input type="submit" id="submit" value="Submit" />
+        </form>
+    </body>
+</html>
